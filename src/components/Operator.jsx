@@ -2,12 +2,12 @@ const OperatorComponent = ({ onSelect }) => {
   const operators = ['+', '-', '*', '/'];
 
   return (
-    <div className="flex space-x-2">
+    <div className="operator-buttons">
       {operators.map((operator) => (
         <button
           key={operator}
           onClick={() => onSelect(operator)}
-          className="border p-2 rounded-md bg-blue-500 text-white"
+          className="operator-button"
         >
           {operator}
         </button>

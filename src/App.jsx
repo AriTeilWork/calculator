@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 import InputComponent from './components/Input';
 import OperatorComponent from './components/Operator';
 import ResultComponent from './components/Result';
@@ -17,18 +18,22 @@ const App = () => {
   };
 
   return (
-    <div className="p-4 space-y-4">
-      <div className="flex space-x-4">
+    <div className="calculator">
+      <div className="input-container">
         <InputComponent value={num1} onChange={setNum1} />
         <InputComponent value={num2} onChange={setNum2} />
       </div>
-      <OperatorComponent
-        onSelect={(op) => {
-          setOperator(op);
-          calculateResult();
-        }}
-      />
-      <ResultComponent result={result} />
+      <div className="operator-container">
+        <OperatorComponent
+          onSelect={(op) => {
+            setOperator(op);
+            calculateResult();
+          }}
+        />
+      </div>
+      <div className="result-container">
+        <ResultComponent result={result} />
+      </div>
     </div>
   );
 };
