@@ -56,9 +56,9 @@ body {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
+  padding: 30px; /* Increased padding */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px; /* Increased width */
   overflow: hidden; /* Prevent content from overflowing */
 }
 
@@ -70,13 +70,18 @@ body {
 
 .operator-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the operator buttons */
+  gap: 10px; /* Add spacing between buttons */
   margin-bottom: 20px;
 }
 
 .result-container {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Slightly larger font for better visibility */
   font-weight: bold;
   color: #333;
+  display: flex;
+  justify-content: center; /* Center the result */
+  align-items: center;
+  height: 50px; /* Ensure consistent height */
 }
