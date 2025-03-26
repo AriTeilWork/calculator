@@ -9,7 +9,8 @@ const App = () => {
   return (
     <div className="p-4 space-y-4">
       <div className="flex space-x-4">
-        {/* Input components.....*/}
+        <InputComponent value={num1} onChange={setNum1} />
+        <InputComponent value={num2} onChange={setNum2} />
       </div>
       {/* Operator and Result components.....*/}
     </div>
