@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import InputComponent from './components/Input';
+import OperatorComponent from './components/Operator';
 
 const App = () => {
   const [num1, setNum1] = useState(0);
@@ -12,6 +14,7 @@ const App = () => {
         <InputComponent value={num1} onChange={setNum1} />
         <InputComponent value={num2} onChange={setNum2} />
       </div>
+      <OperatorComponent onSelect={(op) => { setOperator(op); }} />
       {/* Operator and Result components.....*/}
     </div>
   );
