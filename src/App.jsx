@@ -3,6 +3,14 @@ import InputComponent from './components/Input';
 import OperatorComponent from './components/Operator';
 import ResultComponent from './components/Result';
 
+const calculateResult = () => {
+  if (operator === '+') setResult(num1 + num2);
+  else if (operator === '-') setResult(num1 - num2);
+  else if (operator === '*') setResult(num1 * num2);
+  else if (operator === '/') setResult(num2 !== 0 ? num1 / num2 : 'Error');
+};
+
+
 const App = () => {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
@@ -15,7 +23,7 @@ const App = () => {
         <InputComponent value={num1} onChange={setNum1} />
         <InputComponent value={num2} onChange={setNum2} />
       </div>
-      <OperatorComponent onSelect={(op) => { setOperator(op); }} />
+      <OperatorComponent onSelect={(op) => { setOperator(op); calculateResult(); }} />
       <ResultComponent result={result} />
     </div>
   );
